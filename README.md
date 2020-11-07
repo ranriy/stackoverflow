@@ -2,16 +2,16 @@
 
 ## Tasks:
 1. Get top 50 tags by popularity:
-   Used https://api.stackexchange.com/2.2/tags?order=desc&sort=popular&site=stackoverflow&pagesize=50 to retrieve the required tags and the total asked questions in each tags
+   <p>Used https://api.stackexchange.com/2.2/tags?order=desc&sort=popular&site=stackoverflow&pagesize=50 to retrieve the required tags and the total asked questions in each tags</p>
    
 2. Get the percentage of total unanswered questions to total asked questions in each tag:
-   For each tag, used the queries like https://api.stackexchange.com/2.2/questions/unanswered?order=desc&sort=activity&tagged={tagname}&site=stackoverflow&filter=total (replacing tagname) to get unanswered questions and therby calculate the percentage
+   <p>For each tag, used the queries like https://api.stackexchange.com/2.2/questions/unanswered?order=desc&sort=activity&tagged={tagname}&site=stackoverflow&filter=total (replacing tagname) to get unanswered questions and therby calculate the percentage</p>
    
-3. All the data must be available in DB at all times.
-   Upon running the custom command `python manage.py refreshdb` all the data for 50 tags is bulk created or updated in the db in tags_tag table
+3. All the data must be available in DB at all times:
+   <p>Upon running the custom command `python manage.py refreshdb` all the data for 50 tags is bulk created or updated in the db in tags_tag table</p>
    
-4. Show this data in a bar-graph or a pie-chart.
-   Pie chart is displayed on http://127.0.0.1:8000/tags/display/ when running the application locally
+4. Show this data in a bar-graph or a pie-chart:
+   <p>Pie chart is displayed on http://127.0.0.1:8000/tags/display/ when running the application locally</p>
    
 ## Steps to run locally:
 1. Clone the repo `https://github.com/ranriy/stackoverflow.git`

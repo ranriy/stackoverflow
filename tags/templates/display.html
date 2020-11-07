@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-
+  <title>Pie Chart</title>
 </head>
+
 <body>
-<div id="container" style="width: 75%;">
+  <h1>Percentage of total unanswered questions to total asked questions in 50 most popluar stackoverflow tags</h1>
+  <div id="container" style="width: 75%;">
     <canvas id="pie-chart"></canvas>
   </div>
-  <p>Pie chart</p>
 
   
   <script>
@@ -19,9 +19,9 @@
         datasets: [{
           data: {{ data|safe }},
           backgroundColor: [
-            '#696969', '#808080', '#A9A9A9', '#C0C0C0', '#D3D3D3'
+            "#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA", "#000d33", "#339933", "#666600", "#ffffe6", "#1a1a00", "#660000", "#ff9900", "#00ffcc", "#ccffdd", "#5c8a8a", "#b3b3cc", "#bbbb77", "#e6005c", "#33ccff", "#c2d1f0", "#ff9999", "#ff99ff", "#00cc00", "#009999", "#003399", "#1aff1a", "#999966", "#00091a", "#00ff99", "#1ab2ff", "#66ff99", "#333300", "#7575a3", "#66b3ff", "#258e8e", "#009942", "#f2a6cb", "#ff9e99", "#eafaec", "#ffbb80",
           ],
-          label: 'Population'
+          label: 'Percentage'
         }],
         labels: {{ labels|safe }}
       },
@@ -31,7 +31,7 @@
     };
 
     window.onload = function() {
-      var ctx = document.getElementById('pie-chart').getContext('2d');
+      var ctx = document.getElementById("pie-chart").getContext("2d");
       window.myPie = new Chart(ctx, config);
     };
 
